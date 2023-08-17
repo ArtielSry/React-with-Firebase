@@ -1,0 +1,119 @@
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.active {
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    width: 90%;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.inactive {
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 50px;
+    width: 90%;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color :rgb(137, 129, 216);
+}
+
+.containerForm {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formInput {
+    display: flex;
+    align-items: center;
+    background-color: rgb(244, 244, 244);
+    margin: 5px;
+    height: 50px;
+    text-align: left !important;
+    padding: 5px;
+    width: 350px;
+}
+
+.formInput input {
+    width: 90%;
+    outline: none;
+    margin-right: 20px;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+}
+.formInput label {
+    color: gray;
+    margin: 20px 10PX;
+}
+
+.btn {
+    padding: 20px;
+    margin: 20px 90px;
+    border-radius: 30px;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(137, 129, 216);
+    transition: 0.1s ease all;
+    width: 300px;
+}
+
+small {
+    color: gray;
+    margin: 10px 0;
+}
+
+/**/
+.containerChange {
+    width: 50%;
+    background-image: url('../assets/fondo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerChange h2 {
+    color: white;
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.containerChange p {
+    color: white;
+}
+
+.containerChange button {
+    padding: 20px;
+    margin: 20px 90px;
+    border-radius: 30px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    transition: 0.1s ease all;
+}

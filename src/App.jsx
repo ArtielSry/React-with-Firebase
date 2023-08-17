@@ -1,35 +1,25 @@
 import { useState } from 'react';
-import './App.css';
-import reactLogo from './assets/react.svg';
-import viteLogo from './assets/vite.svg';
+import Home from './components/Home';
+import Login from './components/Login';
+import './styles/App.css';
+
+import firebaseApp from './credencials.js';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+
+const auth = getAuth(firebaseApp);
 
 function App() {
-	const [count, setCount] = useState(0);
+	const [user, setUser] = useState(null);
 
-	return (
-		<>
-			<div>
-				<a href='https://vitejs.dev' target='_blank' rel='noreferrer'>
-					<img src={viteLogo} className='logo' alt='Vite logo' />
-				</a>
-				<a href='https://react.dev' target='_blank' rel='noreferrer'>
-					<img src={reactLogo} className='logo react' alt='React logo' />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className='card'>
-				<button onClick={() => setCount(count => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.jsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className='read-the-docs'>
-				Click on the Vite and React logos to learn more
-			</p>
-		</>
-	);
+	onAuthStateChanged(auth, userFirebase => {
+		if (userFirebase) {
+			setUser(userFirebase);
+		} else {
+			setUser(null);
+		}
+	});
+
+	return <>{user ? <Home emailUser={user.email} /> : <Login />}</>;
 }
 
 export default App;

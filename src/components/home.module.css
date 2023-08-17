@@ -1,0 +1,156 @@
+.user {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: end;
+    box-shadow:  -6px 6px 12px #d9d9d9,
+             6px -6px 12px #ffffff;
+    align-items: center;
+             
+}
+
+.green {
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    background-color: rgb(27, 182, 27);
+    margin-right: 3em;
+    margin-left: 1em;
+}
+
+
+.user p {
+    font-weight: bold;
+}
+
+.btnExit {
+    border: none;
+    width: 50px;
+    height: 50px;
+    transition: 0.2s ease all;
+}
+
+.btnExit:hover {
+    background-color: #d9d9d9;
+}
+
+
+.containerFirst {
+    display: flex;
+    width: 100%;
+}
+
+.containerCreate {
+    min-width: 300px;
+    background-color: rgb(137, 129, 216);
+    height: 100vh;
+    z-index: 1;
+    padding: 1.5em;
+}
+
+.containerCreate h2 {
+    color: white;
+}
+
+.containerForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerForm button {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(222, 222, 222);
+    margin: 1em 0;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    transition: 0.2s ease all;
+    font-weight: bold;
+    color: rgb(137, 129, 216);
+}
+
+.containerForm button:hover {
+    box-shadow: none;
+}
+
+.containerForm input,
+.containerForm textarea {
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(222, 222, 222);
+    margin: 5px 0;
+    resize: none;
+}
+
+
+
+.containerForm textarea {
+    height: 150px;
+}
+
+.containerList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 300px;
+    padding: 2em;
+}
+.card {
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.cardInfo {
+    padding: 1em;
+}
+
+.cardInfoSpan {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin: 1px;
+}
+
+.cardInfoSpan span {
+    color: rgb(181, 181, 181);
+}
+
+.containerList h2 {
+    margin: 1.5em;
+}
+
+.date {
+    font-size: 12px;
+    color: rgb(181, 181, 181);
+    font-weight: bold;
+}
+
+.update, .delete {
+    border: none;
+    margin: 2px;
+    background-color: transparent;
+    color: rgb(181, 181, 181);
+    transition: 0.1s ease all;
+}
+
+.update:hover, .delete:hover {
+    color: black;
+}
+
+.actions {
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+}
