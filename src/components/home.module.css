@@ -1,37 +1,3 @@
-.user {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: end;
-    box-shadow:  -6px 6px 12px #d9d9d9,
-             6px -6px 12px #ffffff;
-    align-items: center;
-             
-}
-
-.green {
-    width: 10px;
-    border-radius: 50%;
-    height: 10px;
-    background-color: rgb(27, 182, 27);
-    margin-right: 3em;
-    margin-left: 1em;
-}
-
-
-.user p {
-    font-weight: bold;
-}
-
-.btnExit {
-    border: none;
-    width: 50px;
-    height: 50px;
-    transition: 0.2s ease all;
-}
-
-.btnExit:hover {
-    background-color: #d9d9d9;
-}
 
 
 .containerFirst {
@@ -153,4 +119,85 @@
     display: flex;
     justify-content: flex-end;
     margin: 5px;
+}
+
+.open {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    color: white;
+    font-size: 25px;
+    background-color:#651b64 ;
+    z-index: 5;
+    bottom: 15px;
+    right: 15px;
+    position: fixed;
+    transition: 0.2s ease all;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.close {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    color: white;
+    font-size: 25px;
+    background-color:#651b64 ;
+    z-index: 5;
+    bottom: 15px;
+    right: 15px;
+    position: fixed;
+    transition: 0.2s ease all;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+@media screen and (min-width: 901px) {
+    .show {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .containerFirst {
+       flex-direction: column;
+    }
+
+    .show {
+        transition: 0.2s ease all;
+       
+        -webkit-animation: scale-up-ver-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-ver-center 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+    @-webkit-keyframes scale-up-ver-center {
+        0% {
+          -webkit-transform: scaleY(0.4);
+                  transform: scaleY(0.4);
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+        }
+      }
+      @keyframes scale-up-ver-center {
+        0% {
+          -webkit-transform: scaleY(0.4);
+                  transform: scaleY(0.4);
+        }
+        100% {
+          -webkit-transform: scaleY(1);
+                  transform: scaleY(1);
+        }
+      }
+      
+
 }

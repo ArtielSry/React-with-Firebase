@@ -20,6 +20,9 @@
 
 .user p {
     font-weight: bold;
+    padding: 5px;
+    font-size: 13px;
+    text-align: center;
 }
 
 .btnExit {

@@ -2,6 +2,7 @@ import firebaseApp from '../credencials.js';
 import { getAuth, signOut } from 'firebase/auth';
 import style from './home.module.css';
 import { useEffect, useState } from 'react';
+import AddIcon from '@mui/icons-material/Add';
 
 // destructuring de lo que necesitamo de firebase
 import {
@@ -34,6 +35,8 @@ const Home = ({ emailUser }) => {
 	const [plan, setPlan] = useState(initialValue);
 	const [list, setList] = useState([]);
 	const [subId, setSubId] = useState('');
+
+	const [toggle, setToggle] = useState(true);
 
 	// función para capturar inputs
 	const capturingInput = e => {
@@ -100,19 +103,29 @@ const Home = ({ emailUser }) => {
 		if (subId !== '') updatePlan(subId);
 	}, [subId]);
 
+	// condicional de styles
+	const activoClassName = toggle ? style.open : style.close;
+
 	return (
 		<>
 			<User emailUser={emailUser} signOut={signOut} auth={auth} />
 			<div className={style.containerFirst}>
-				<FormCreatePlan
-					savePlan={savePlan}
-					capturingInput={capturingInput}
-					plan={plan.plan}
-					place={plan.place}
-					more={plan.more}
-					subId={subId}
-					date={plan.date}
-				/>
+				<button onClick={() => setToggle(!toggle)} className={activoClassName}>
+					<AddIcon />
+				</button>
+				{toggle && (
+					<div className={style.show}>
+						<FormCreatePlan
+							setSubId={setSubId}
+							savePlan={savePlan}
+							capturingInput={capturingInput}
+							plan={plan.plan}
+							place={plan.place}
+							more={plan.more}
+							subId={subId}
+						/>
+					</div>
+				)}
 				<ListOfPlans list={list} deletePlan={deletePlan} setSubId={setSubId} />
 			</div>
 		</>

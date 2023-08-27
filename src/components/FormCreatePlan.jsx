@@ -8,11 +8,12 @@ const FormCreatePlan = ({
 	place,
 	more,
 	subId,
-	date
 }) => {
 	return (
 		<div className={style.containerCreate}>
-					<h2>Create plan</h2>
+					
+					<h2>{subId === '' ? 'Create plan' : 'Update plan'}</h2>
+					
 					<form onSubmit={savePlan}>
 						<div className={style.containerForm}>
 							<input
@@ -37,16 +38,12 @@ const FormCreatePlan = ({
 								value={more}
 								maxLength='50'
 							></textarea>
-							<input
-								type='date'
-								onChange={capturingInput}
-								value={date}
-							></input>
 							<button>{subId === '' ? 'Save plan' : 'Update plan'}</button>
 						</div>
 					</form>
 				</div>
 	);
 };
+
 
 export default FormCreatePlan;
