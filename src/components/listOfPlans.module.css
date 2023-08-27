@@ -89,3 +89,10 @@
     justify-content: flex-end;
     margin: 5px;
 }
+
+@media screen and (max-width: 900px) {
+ .card {
+    width: 330px;
+    height: 100%;
+ }
+}
